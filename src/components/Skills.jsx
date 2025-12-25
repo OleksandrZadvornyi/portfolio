@@ -21,7 +21,7 @@ const SkillCategory = ({ title, icon: Icon, skills, color }) => (
       {skills.map((skill) => (
         <span 
           key={skill} 
-          className="px-3 py-1 bg-slate-50 dark:bg-slate-900 text-gray-300 text-sm font-medium rounded-full border border-slate-200 dark:border-slate-700 hover:text-slate-900 dark:text-white hover:border-slate-500 transition-colors cursor-default"
+          className="px-3 py-1 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-gray-300 text-sm font-medium rounded-full border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 transition-colors cursor-default"
         >
           {skill}
         </span>

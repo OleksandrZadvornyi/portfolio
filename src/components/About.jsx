@@ -61,7 +61,7 @@ const About = () => {
           </div>
 
           {/* Right Column: Narrative Bio */}
-          <div className="text-gray-300 space-y-6 leading-relaxed">
+          <div className="text-slate-600 dark:text-gray-300 space-y-6 leading-relaxed">
             <p className="text-lg">
               I am a <span className="text-slate-900 dark:text-white font-semibold">Software Engineer</span> with a passion for solving complex problems through code. My journey in tech is driven by a curiosity for how systems work - from the low-level logic of <span className="text-blue-400">C++</span> to the dynamic capabilities of <span className="text-yellow-400">JavaScript</span> and the data-driven power of <span className="text-emerald-400">Python</span>.
             </p>
@@ -77,7 +77,7 @@ const About = () => {
             {/* Quick Tech Tags */}
             <div className="pt-4 flex flex-wrap gap-3">
               {['Python', 'C++', 'React', 'TypeScript', 'WebdriverIO', 'PyTorch'].map((tech) => (
-                <span key={tech} className="px-3 py-1 bg-white dark:bg-slate-800 shadow-md text-gray-300 text-sm rounded-full border border-slate-200 dark:border-slate-700">
+                <span key={tech} className="px-3 py-1 bg-white dark:bg-slate-800 shadow-md text-slate-600 dark:text-gray-300 text-sm rounded-full border border-slate-200 dark:border-slate-700">
                   {tech}
                 </span>
               ))}

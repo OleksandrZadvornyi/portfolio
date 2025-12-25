@@ -22,9 +22,9 @@ const Hero = () => {
             <p className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl mb-8 leading-relaxed">
               Software Engineer specializing in scalable web applications and data intelligence. 
               I bridge the gap between application development and research using
-              <span className="text-gray-200 font-semibold"> Python</span>, 
-              <span className="text-gray-200 font-semibold"> C++</span> and 
-              <span className="text-gray-200 font-semibold"> TypeScript</span>.
+              <span className="text-slate-700 dark:text-gray-200 font-semibold"> Python</span>, 
+              <span className="text-slate-700 dark:text-gray-200 font-semibold"> C++</span> and 
+              <span className="text-slate-700 dark:text-gray-200 font-semibold"> TypeScript</span>.
             </p>
 
             {/* CTA Buttons */}
