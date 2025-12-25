@@ -30,6 +30,7 @@ const Projects = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
+              aria-label="Set Active Category"
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 

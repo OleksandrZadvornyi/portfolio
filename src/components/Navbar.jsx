@@ -49,6 +49,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              aria-label="Open Mobile Menu"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white focus:outline-none"
             >
