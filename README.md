@@ -70,6 +70,9 @@ npm run build
 * **LinkedIn:** [Oleksandr Zadvornyi](https://www.linkedin.com/in/oleksandr-zadvornyi-ab955131a)
 * **GitHub:** [OleksandrZadvornyi](https://github.com/OleksandrZadvornyi)
 
----
+## 📄 License
 
-© 2025 Oleksandr Zadvornyi. All rights reserved.
+The source code for this project is licensed under the [MIT License](LICENSE).
+
+**Note:** the content of this website (including images, project descriptions, and personal biography) is **© 2025 Oleksandr Zadvornyi**. 
+You are free to fork this repository and use the code as a template for your own portfolio, but please replace the content and images with your own.
