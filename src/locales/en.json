@@ -16,6 +16,10 @@
             "buttons": {
                 "projects": "View Projects",
                 "cv": "Download CV"
+            },
+            "CV": {
+                "english": "In English",
+                "ukrainian": "In Ukrainian"
             }
         },
         "about": {

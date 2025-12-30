@@ -1,4 +1,5 @@
-import { LuMail, LuArrowDown, LuDownload } from "react-icons/lu";
+import { useState, useEffect, useRef } from "react";
+import { LuMail, LuArrowDown, LuDownload, LuChevronDown } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
@@ -6,6 +7,21 @@ import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   const { t } = useTranslation();
+
+  // State for the dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 pt-16 relative overflow-hidden">
@@ -17,7 +33,7 @@ const Hero = () => {
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
           {/* LEFT: Text Content */}
-          <div className="flex-3 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex-3 flex flex-col items-center md:items-start text-center md:text-left mb-10">
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
               {t('hero.greeting')} <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-emerald-400">{t('hero.name')}</span>
             </h1>
@@ -38,14 +54,43 @@ const Hero = () => {
               >
                 {t('hero.buttons.projects')}
               </a>
-              <a
-                href="/Oleksandr_Zadvornyi_CV.pdf"
-                download="Oleksandr_Zadvornyi_CV.pdf"
-                className="px-8 py-3 flex items-center gap-2 bg-white dark:bg-slate-800 shadow-md text-slate-900 dark:text-white rounded-lg font-medium hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700"
-              >
-                <LuDownload size={20} />
-                {t('hero.buttons.cv')}
-              </a>
+              {/* Dropdown Container */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="w-full sm:w-auto px-8 py-3 flex items-center justify-center gap-2 bg-white dark:bg-slate-800 shadow-md text-slate-900 dark:text-white rounded-lg font-medium hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700"
+                >
+                  <LuDownload size={20} />
+                  {t('hero.buttons.cv')}
+                  <LuChevronDown
+                    size={16}
+                    className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-full min-w-40 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden z-100 animate-in fade-in zoom-in-95 duration-100">
+                    <a
+                      href="/Oleksandr_Zadvornyi_CV_EN.pdf"
+                      download="Oleksandr_Zadvornyi_CV_EN.pdf"
+                      className="block px-4 py-3 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-left"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {t('hero.CV.english')}
+                    </a>
+                    <div className="h-px bg-slate-200 dark:bg-slate-700"></div>
+                    <a
+                      href="/Oleksandr_Zadvornyi_CV_UA.pdf"
+                      download="Oleksandr_Zadvornyi_CV_UA.pdf"
+                      className="block px-4 py-3 text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-left"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {t('hero.CV.ukrainian')}
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Social Links */}
