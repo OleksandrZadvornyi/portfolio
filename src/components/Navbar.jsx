@@ -30,7 +30,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   );
 
   return (
-    <nav className="fixed w-full z-50 backdrop-blur-md transition-colors duration-300 bg-white/80 border-slate-200 dark:bg-slate-900/80 dark:border-slate-800 border-b">
+    <nav className="fixed w-full z-50 transition-colors duration-300 bg-white/95 border-slate-200 dark:bg-slate-900/95 dark:border-slate-800 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="shrink-0">

@@ -25,10 +25,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 pt-16 relative overflow-hidden">
-
-      {/* Background Decor (adds depth behind photo) */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
@@ -110,8 +106,6 @@ const Hero = () => {
           {/* RIGHT: Profile Photo */}
           <div className="flex-2 flex justify-center md:justify-end relative">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="absolute inset-0 rounded-full bg-linear-to-tr from-blue-500 to-emerald-500 blur-sm opacity-50 animate-pulse"></div>
-
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl">
                 <img
                   src={profileImg}
