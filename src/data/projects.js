@@ -10,12 +10,25 @@ import {
     LuBookOpen
 } from "react-icons/lu";
 
+import fireGalleryImg from '../assets/projects/firegallery.png';
+import kalHansLandingImg from '../assets/projects/kal-hans-landing.png';
+import eegImg from '../assets/projects/eeg.png';
+import educateImg from '../assets/projects/educate.png';
+import denticsImg from '../assets/projects/dentics.png';
+import audioRecorderImg from '../assets/projects/audio-recorder.png';
+import kalHansBackendImg from '../assets/projects/kal-hans-backend.png';
+import webdriverioDemoImg from '../assets/projects/webdriverio-demo.png';
+import frontendAnalyzerImg from '../assets/projects/frontend-analyzer.png';
+import llmCodeEvaluationImg from '../assets/projects/llm-code-eval.png';
+
+
 export const projects = [
     {
         title: {
             en: "Fire Gallery",
             ua: "Fire Gallery"
         },
+        image: fireGalleryImg,
         description: {
             en: "A modern image gallery with Firebase Authentication, Firestore and drag-and-drop storage.",
             ua: "Сучасна галерея зображень з аутентифікацією Firebase, Firestore та можливістю перетягування файлів (drag-and-drop)."
@@ -48,6 +61,7 @@ export const projects = [
             en: "Kal-Hans Backend",
             ua: "Kal-Hans Backend"
         },
+        image: kalHansBackendImg,
         description: {
             en: "RESTful API for an e-commerce platform managing products, blogs and social posts.",
             ua: "RESTful API для платформи електронної комерції, що керує продуктами, блогами та соціальними публікаціями."
@@ -64,6 +78,7 @@ export const projects = [
             en: "EEG Seizure Detection",
             ua: "EEG Seizure Detection"
         },
+        image: eegImg,
         description: {
             en: "Automated framework using Topological Data Analysis and Random Forest on CHB-MIT Scalp EEG data.",
             ua: "Автоматизований фреймворк з використанням топологічного аналізу даних та Random Forest на даних CHB-MIT Scalp EEG."
@@ -80,6 +95,7 @@ export const projects = [
             en: "WebdriverIO Automation",
             ua: "WebdriverIO Automation"
         },
+        image: webdriverioDemoImg,
         description: {
             en: "Robust E2E testing framework implementing the Page Object Model (POM) design pattern.",
             ua: "Надійний фреймворк для E2E тестування, що реалізує шаблон проектування Page Object Model (POM)."
@@ -96,6 +112,7 @@ export const projects = [
             en: "LLM Code Evaluation",
             ua: "LLM Code Evaluation"
         },
+        image: llmCodeEvaluationImg,
         description: {
             en: "Framework for assessing credibility of LLM-generated Python code using static analysis.",
             ua: "Фреймворк для оцінки якості Python-коду, згенерованого LLM, за допомогою статичного аналізу."
@@ -112,6 +129,7 @@ export const projects = [
             en: "Audio Recorder (C++)",
             ua: "Audio Recorder (C++)"
         },
+        image: audioRecorderImg,
         description: {
             en: "Enhanced Qt Audio Recorder implementing Observer, Command and Strategy patterns.",
             ua: "Розширений аудіо рекордер на Qt, що реалізує патерни Observer, Command та Strategy."
@@ -128,6 +146,7 @@ export const projects = [
             en: "Frontend Performance CLI",
             ua: "Frontend Performance CLI"
         },
+        image: frontendAnalyzerImg,
         description: {
             en: "CLI tool to analyze frontend performance using Lighthouse and Puppeteer programmatically.",
             ua: "CLI інструмент для аналізу продуктивності фронтенду з використанням Lighthouse та Puppeteer."
@@ -144,6 +163,7 @@ export const projects = [
             en: "Kal-Hans Frontend",
             ua: "Kal-Hans Frontend"
         },
+        image: kalHansLandingImg,
         description: {
             en: "Modern e-commerce UI for the Kal-Hans brand. Features responsive design and connects to the Node.js backend.",
             ua: "Сучасний інтерфейс електронної комерції для бренду Kal-Hans. Має адаптивний дизайн та підключається до бекенду на Node.js."
@@ -160,6 +180,7 @@ export const projects = [
             en: "Dental Clinic Multi-Lang",
             ua: "Dental Clinic Multi-Lang"
         },
+        image: denticsImg,
         description: {
             en: "A multilingual landing page supporting 5 languages. Built with a custom Webpack configuration and i18next.",
             ua: "Багатомовна цільова сторінка з підтримкою 5 мов. Створена з кастомною конфігурацією Webpack та i18next."
@@ -176,6 +197,7 @@ export const projects = [
             en: "Educate Platform",
             ua: "Educate Platform"
         },
+        image: educateImg,
         description: {
             en: "A responsive education platform landing page featuring modern animations and multi-language support.",
             ua: "Адаптивна цільова сторінка освітньої платформи з сучасною анімацією та підтримкою кількох мов."
