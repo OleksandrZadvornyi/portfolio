@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 const Navbar = ({ theme, toggleTheme }) => {
   const { t, i18n } = useTranslation();
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'ua' : 'en';
+    const currentLangIsEnglish = i18n.language.startsWith('en');
+    const newLang = currentLangIsEnglish ? 'ua' : 'en';
     i18n.changeLanguage(newLang);
   };
 
@@ -25,7 +26,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       className="px-3 py-2 rounded-lg transition-colors hover:bg-slate-100 dark:hover:bg-white dark:bg-slate-800 shadow-md text-slate-600 dark:text-gray-300 font-bold text-sm tracking-wide"
       aria-label="Toggle Language"
     >
-      {i18n.language === 'en' ? 'EN' : 'UA'}
+      {i18n.language.startsWith('en') ? 'EN' : 'UA'}
     </button>
   );
 
