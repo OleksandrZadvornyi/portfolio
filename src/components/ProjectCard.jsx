@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
         <div className="flex justify-between items-start mb-4">
           <div>
             <span className="text-blue-500 dark:text-blue-400 text-xs font-semibold tracking-wider uppercase">
-              {project.category}
+              {project.category.join(' • ')}
             </span>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               {title}

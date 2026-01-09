@@ -7,7 +7,8 @@ import {
     LuSearch,
     LuMonitor,
     LuGlobe,
-    LuBookOpen
+    LuBookOpen,
+    LuListTodo
 } from "react-icons/lu";
 
 import fireGalleryImg from '../assets/projects/firegallery.png';
@@ -15,11 +16,11 @@ import kalHansLandingImg from '../assets/projects/kal-hans-landing.png';
 import eegImg from '../assets/projects/eeg.png';
 import educateImg from '../assets/projects/educate.png';
 import denticsImg from '../assets/projects/dentics.png';
-import audioRecorderImg from '../assets/projects/audio-recorder.png';
 import kalHansBackendImg from '../assets/projects/kal-hans-backend.png';
 import webdriverioDemoImg from '../assets/projects/webdriverio-demo.png';
 import frontendAnalyzerImg from '../assets/projects/frontend-analyzer.png';
 import llmCodeEvaluationImg from '../assets/projects/llm-code-eval.png';
+import todoAppImg from '../assets/projects/todo-app.png';
 
 
 export const projects = [
@@ -34,7 +35,7 @@ export const projects = [
             ua: "Сучасна галерея зображень з аутентифікацією Firebase, Firestore та можливістю перетягування файлів (drag-and-drop)."
         },
         tech: ["React", "TypeScript", "Firebase", "Tailwind"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/fire-gallery",
         demo: "https://fire-gallery-84947.web.app/signin",
         icon: LuLayoutDashboard,
@@ -50,7 +51,7 @@ export const projects = [
             ua: "Модель глибокого навчання для прогнозування денних температур з використанням Time Series Transformers та GluonTS."
         },
         tech: ["Python", "PyTorch", "GluonTS", "HuggingFace"],
-        category: "Data Science",
+        category: ["Data Science"],
         github: "https://github.com/OleksandrZadvornyi/weather-forecasting",
         demo: null,
         icon: LuActivity,
@@ -67,7 +68,7 @@ export const projects = [
             ua: "RESTful API для платформи електронної комерції, що керує продуктами, блогами та соціальними публікаціями."
         },
         tech: ["Node.js", "Express", "MongoDB", "TypeScript"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/kal-hans-backend",
         demo: null,
         icon: LuDatabase,
@@ -84,7 +85,7 @@ export const projects = [
             ua: "Автоматизований фреймворк з використанням топологічного аналізу даних та Random Forest на даних CHB-MIT Scalp EEG."
         },
         tech: ["Python", "MNE", "Scikit-Learn", "Streamlit"],
-        category: "Data Science",
+        category: ["Data Science"],
         github: "https://github.com/OleksandrZadvornyi/eeg",
         demo: null,
         icon: LuActivity,
@@ -101,7 +102,7 @@ export const projects = [
             ua: "Надійний фреймворк для E2E тестування, що реалізує шаблон проектування Page Object Model (POM)."
         },
         tech: ["JavaScript", "WebdriverIO", "Selenium", "Mocha"],
-        category: "QA Automation",
+        category: ["QA Automation"],
         github: "https://github.com/OleksandrZadvornyi/webdriver-demo",
         demo: null,
         icon: LuTerminal,
@@ -118,28 +119,11 @@ export const projects = [
             ua: "Фреймворк для оцінки якості Python-коду, згенерованого LLM, за допомогою статичного аналізу."
         },
         tech: ["Python", "LangChain", "Docker", "NLP"],
-        category: "Data Science",
+        category: ["Data Science"],
         github: "https://github.com/OleksandrZadvornyi/prompt-engineering",
         demo: null,
         icon: LuSearch,
         color: "text-yellow-400"
-    },
-    {
-        title: {
-            en: "Audio Recorder (C++)",
-            ua: "Audio Recorder (C++)"
-        },
-        image: audioRecorderImg,
-        description: {
-            en: "Enhanced Qt Audio Recorder implementing Observer, Command and Strategy patterns.",
-            ua: "Розширений аудіо рекордер на Qt, що реалізує патерни Observer, Command та Strategy."
-        },
-        tech: ["C++", "Qt Framework", "Design Patterns"],
-        category: "Software Engineering",
-        github: "https://github.com/OleksandrZadvornyi/audiorecorder",
-        demo: null,
-        icon: LuCode,
-        color: "text-blue-600"
     },
     {
         title: {
@@ -152,7 +136,7 @@ export const projects = [
             ua: "CLI інструмент для аналізу продуктивності фронтенду з використанням Lighthouse та Puppeteer."
         },
         tech: ["JavaScript", "Puppeteer", "Lighthouse", "CLI"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/frontend-performance-analyzer",
         demo: null,
         icon: LuTerminal,
@@ -169,7 +153,7 @@ export const projects = [
             ua: "Сучасний інтерфейс електронної комерції для бренду Kal-Hans. Має адаптивний дизайн та підключається до бекенду на Node.js."
         },
         tech: ["React", "TypeScript", "Tailwind", "Vite"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/kal-hans-landing",
         demo: "https://kal-hans.netlify.app/",
         icon: LuMonitor,
@@ -186,7 +170,7 @@ export const projects = [
             ua: "Багатомовна цільова сторінка з підтримкою 5 мов. Створена з кастомною конфігурацією Webpack та i18next."
         },
         tech: ["JavaScript", "Webpack", "i18next", "SCSS"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/dental-clinic-landing",
         demo: "https://denticss.netlify.app/",
         icon: LuGlobe,
@@ -203,10 +187,27 @@ export const projects = [
             ua: "Адаптивна цільова сторінка освітньої платформи з сучасною анімацією та підтримкою кількох мов."
         },
         tech: ["Vite", "JavaScript", "CSS3", "Animations"],
-        category: "Web Dev",
+        category: ["Web Dev"],
         github: "https://github.com/OleksandrZadvornyi/educate-landing",
         demo: "https://e-learn-website.netlify.app/",
         icon: LuBookOpen,
         color: "text-indigo-400"
+    },
+    {
+        title: {
+            en: "SimplyDone",
+            ua: "SimplyDone"
+        },
+        image: todoAppImg,
+        description: {
+            en: "Minimalist To-Do app with clean React architecture, local storage persistence, and robust E2E testing with WebdriverIO.",
+            ua: "Мінімалістичний To-Do додаток з чистою архітектурою React, збереженням даних та надійними E2E тестами на WebdriverIO."
+        },
+        tech: ["React 19", "TypeScript", "Tailwind", "WebdriverIO"],
+        category: ["Web Dev", "QA Automation"],
+        github: "https://github.com/OleksandrZadvornyi/to-do-app",
+        demo: "https://simply-done.netlify.app/",
+        icon: LuListTodo,
+        color: "text-blue-500"
     }
 ];

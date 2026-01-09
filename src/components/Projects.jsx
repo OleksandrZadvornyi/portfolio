@@ -8,12 +8,11 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Get unique categories from data
-  const categories = ['All', ...new Set(projects.map(p => p.category))];
+  const categories = ['All', ...new Set(projects.flatMap(p => p.category))];
 
   const filteredProjects = activeCategory === 'All'
     ? projects
-    : projects.filter(project => project.category === activeCategory);
-
+    : projects.filter(project => project.category.includes(activeCategory));
   return (
     <section id="projects" className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
